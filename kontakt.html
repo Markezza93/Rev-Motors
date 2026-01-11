@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONTAKT | REV MOTORS</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="section">
+        <div class="container">
+            <div class="action-card" style="max-width: 600px; margin: 0 auto; border-color: #222;">
+                <h2 class="section-title">KONTAKT <span class="accent">FORMA</span></h2>
+                <p>Zainteresovani ste za kupovinu? Ostavite podatke i naš prodajni tim će vas pozvati u roku od 24h.</p>
+                
+                <form id="contact-form" class="newsletter-form" style="text-align: left;">
+                    <label>Ime i prezime</label>
+                    <input type="text" id="contact-name" placeholder="Marko Marković" required>
+                    
+                    <label>Email adresa</label>
+                    <input type="email" id="email" placeholder="vas@email.com" required>
+                    
+                    <label>Broj telefona</label>
+                    <input type="text" id="phone" placeholder="3816xxxxxxxx" required>
+                    
+                    <label>Poruka (opciono)</label>
+                    <textarea style="width:100%; background:#111; border:1px solid #333; color:white; padding:15px; border-radius:5px; height:100px;"></textarea>
+                    
+                    <button type="submit" class="btn btn-primary" style="width:100%; margin-top:20px;">POŠALJI ZAHTEV</button>
+                </form>
+                <div id="form-message" class="form-message"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="main.js"></script>
+</body>
+</html>
