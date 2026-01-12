@@ -9,15 +9,18 @@ const motoriLanding = [
 ];
 
 const shopProizvodi = [
-    { ime: "Ducati Panigale V4", cena: "25.900 €", slika: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=500&auto=format" },
-    { ime: "BMW R 1250 GS", cena: "19.200 €", slika: "https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?q=80&w=500&auto=format" },
-    { ime: "Yamaha R1 Dark", cena: "18.500 €", slika: "https://images.unsplash.com/photo-1620056070669-e38053676839?q=80&w=500&auto=format" },
-    { ime: "Kawasaki Ninja H2", cena: "31.000 €", slika: "https://images.unsplash.com/photo-1449495169669-7b118f960237?q=80&w=500&auto=format" }
+    { ime: "Ducati Panigale V4", cena: "25.900 €", slika: "assets/ducati-panigale-v4.png" },
+    { ime: "BMW R 1250 GS", cena: "19.200 €", slika: "assets/bmw-r-1250-gs.png" },
+    { ime: "Yamaha R1M", cena: "29.999 €", slika: "assets/yamaha-r1m.png" },
+    { ime: "Kawasaki Ninja H2", cena: "31.000 €", slika: "assets/Kawasaki-Ninja-H2.png" },
+    { ime: "Honda CBR 1000 RR", cena: "16.999  €", slika: "assets/honda-cbr1000rr.png" },
+    { ime: "Ktm 1290 super duke R", cena: "12.999€", slika: "assets/ktm-1290-super-duke-r.png" }
+
 ];
 
 const blogPostovi = [
-    { naslov: "Održavanje lanca", autor: "Nikola M.", datum: "15.12.2025.", tekst: "Saveti za duži vek trajanja pogonskog lanca.", slika: "https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=500&auto=format" },
-    { naslov: "Zimska oprema", autor: "Jovan P.", datum: "10.12.2025.", tekst: "Šta vam je potrebno za vožnju u hladnim danima.", slika: "https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?q=80&w=500&auto=format" }
+    { naslov: "Održavanje lanca", autor: "Nikola M.", datum: "15.12.2025.", tekst: "Saveti za duži vek trajanja pogonskog lanca.", slika: "assets/blog-1.png" },
+    { naslov: "Zimska oprema", autor: "Jovan P.", datum: "10.12.2025.", tekst: "Šta vam je potrebno za vožnju u hladnim danima.", slika: "assets/blog-2.png" }
 ];
 
 const brendovi = ["Yamaha", "Ducati", "Honda", "Kawasaki", "BMW", "Suzuki", "Triumph", "KTM", "Aprilia"];
@@ -65,13 +68,19 @@ function renderujSve() {
     const landingContainer = document.getElementById('motorcycle-container');
     if (landingContainer) {
         landingContainer.innerHTML = '';
-        motoriLanding.forEach(m => {
+
+        motoriLanding.slice(0, 3).forEach(m => {
             const div = document.createElement('div');
             div.className = 'motor-card';
-            div.innerHTML = `<h3>${m.ime}</h3><p style="color:#666">${m.opis}</p><p class="cena">${m.cena}</p>`;
+            div.innerHTML = `
+                <h3>${m.ime}</h3>
+                <p style="color:#666">${m.opis}</p>
+                <p class="cena">${m.cena}</p>
+            `;
             landingContainer.appendChild(div);
         });
     }
+
 
     // Shop.html - Prodavnica
     const shopContainer = document.getElementById('shop-container');
@@ -83,7 +92,7 @@ function renderujSve() {
                 <img src="${p.slika}" style="width:100%; height:200px; object-fit:cover; border-radius:5px; margin-bottom:15px;">
                 <h3>${p.ime}</h3>
                 <p class="cena">${p.cena}</p>
-                <button class="btn btn-primary" onclick="window.location.href='kontakt.html'" style="width:100%; margin-top:15px;">DODAJ U KORPU</button>
+                <button class="btn btn-primary" onclick="window.location.href='kontakt.html'" style="width:100%; margin-top:15px;">POSALJI UPIT</button>
             `;
             shopContainer.appendChild(div);
         });
