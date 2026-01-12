@@ -1,6 +1,4 @@
-/**
- * PODACI
- */
+
 const motoriLanding = [
     { ime: "Ducati Streetfighter V4", cena: "21.500 €", opis: "V4 Desmosedici Stradale" },
     { ime: "Kawasaki Z H2 SE", cena: "19.800 €", opis: "Supercharged Engine" },
@@ -25,9 +23,7 @@ const blogPostovi = [
 
 const brendovi = ["Yamaha", "Ducati", "Honda", "Kawasaki", "BMW", "Suzuki", "Triumph", "KTM", "Aprilia"];
 
-/**
- * UTILS & COMPONENTS
- */
+
 async function loadComponent(elementId, filePath, callback) {
     try {
         const response = await fetch(filePath);
@@ -60,11 +56,10 @@ function postaviMenuLogic() {
     navLinks.forEach(link => link.onclick = () => { if (navMenu.classList.contains('active')) toggle(); });
 }
 
-/**
- * RENDERERI
- */
+ // Index.html 
+
 function renderujSve() {
-    // Index.html - Novo pristiglo
+   
     const landingContainer = document.getElementById('motorcycle-container');
     if (landingContainer) {
         landingContainer.innerHTML = '';
@@ -82,7 +77,7 @@ function renderujSve() {
     }
 
 
-    // Shop.html - Prodavnica
+    // Shop.html
     const shopContainer = document.getElementById('shop-container');
     if (shopContainer) {
         shopProizvodi.forEach(p => {
@@ -98,7 +93,7 @@ function renderujSve() {
         });
     }
 
-    // Blog.html - Vesti
+    // Blog.html
     const blogContainer = document.getElementById('blog-container');
     if (blogContainer) {
         blogPostovi.forEach(post => {
@@ -156,9 +151,7 @@ function postaviValidaciju() {
     };
 }
 
-/**
- * INIT
- */
+
 document.addEventListener('DOMContentLoaded', () => {
     loadComponent('header-placeholder', 'header.html', postaviMenuLogic);
     loadComponent('footer-placeholder', 'footer.html', () => {

@@ -5,12 +5,36 @@
     --text-gray: #a0a0a0;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background-color: var(--bg-black); color: var(--text-white); overflow-x: hidden; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.accent { color: var(--accent); }
-.section { padding: 80px 0; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-black); 
+    color: var(--text-white); 
+    overflow-x: hidden; 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.accent { 
+    color: var(--accent); 
+}
+
+.section { 
+    padding: 80px 0; 
+}
 
 .none_decoration {
 
@@ -93,55 +117,187 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-black); colo
     background: #b80500;
 }
 
-/* Navbar */
-.navbar { padding: 20px 0; background: rgba(0,0,0,0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
-.nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; }
-.nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { color: white; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; }
 
-/* Hero */
-.hero { height: 80vh; background: url('https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=1920&auto=format&fit=crop') center/cover; }
-.hero-overlay { background: rgba(0,0,0,0.7); height: 100%; display: flex; align-items: center; }
-.hero-content h1 { font-size: 4rem; font-weight: 900; }
+.navbar { 
+    padding: 20px 0;
+     background: rgba(0,0,0,0.95); 
+     position: sticky; 
+     top: 0; z-index: 1000; 
+     border-bottom: 1px solid #222; 
+    }
 
-/* Cards */
-.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.motor-card { background: #111; padding: 30px; border-radius: 8px; border: 1px solid #222; text-align: center; }
-.motor-card .cena { color: var(--accent); font-weight: 900; font-size: 1.4rem; margin-top: 10px; }
+.nav-flex { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
 
-/* Countdown */
-.action-card { background: #111; padding: 50px; border-radius: 15px; text-align: center; border: 2px solid var(--accent); }
-.countdown-timer { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
-.time-box { background: #000; padding: 15px; border-radius: 8px; min-width: 80px; border-bottom: 3px solid var(--accent); }
-.time-box span { font-size: 2rem; font-weight: 900; display: block; }
+.logo { 
+    font-weight: 900; 
+    font-size: 1.5rem; 
+    letter-spacing: 2px; 
+}
 
-/* Dynamic Carousel */
-.logo-carousel { background: #050505; padding: 40px 0; overflow: hidden; border-y: 1px solid #222; }
-.carousel-track { display: flex; gap: 100px; width: max-content; animation: scroll 30s linear infinite; }
-.carousel-track span { font-size: 2rem; font-weight: 900; color: #222; text-transform: uppercase; }
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+}
+.nav-links a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 0.8rem; 
+}
+
+
+.hero { 
+    height: 80vh; 
+    background: url('https://images.unsplash.com/photo-1558981403-c5f91cbba527?q=80&w=1920&auto=format&fit=crop') center/cover; }
+.hero-overlay { 
+    background: rgba(0,0,0,0.7); 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+}
+
+.hero-content h1 { 
+    font-size: 4rem; 
+    font-weight: 900;
+ }
+
+.grid-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+ }
+
+.motor-card { 
+    background: #111; 
+    padding: 30px; 
+    border-radius: 8px; 
+    border: 1px solid #222; 
+    text-align: center; 
+}
+
+
+.motor-card .cena { 
+    color: var(--accent); 
+    font-weight: 900; 
+    font-size: 1.4rem; 
+    margin-top: 10px; 
+}
+
+
+.action-card { 
+    background: #111; 
+    padding: 50px; 
+    border-radius: 15px; 
+    text-align: center; 
+    border: 2px solid var(--accent); 
+}
+
+.countdown-timer { 
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 30px; 
+}
+
+.time-box { 
+    background: #000; 
+    padding: 15px; 
+    border-radius: 8px; 
+    min-width: 80px; 
+    border-bottom: 3px solid var(--accent); 
+}
+
+.time-box span { 
+    font-size: 2rem; 
+    font-weight: 900; 
+    display: block; 
+}
+
+
+.logo-carousel { 
+    background: #050505;
+    padding: 40px 0; 
+    overflow: hidden; 
+    border-y: 1px solid #222; 
+}
+
+.carousel-track { 
+    display: flex; 
+    gap: 100px; width: max-content; 
+    animation: scroll 30s linear infinite; 
+}
+
+.carousel-track span { 
+    font-size: 2rem; 
+    font-weight: 900; 
+    color: #222; 
+    text-transform: uppercase; 
+}
 
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
-/* Newsletter & Validation */
-.newsletter-box { padding: 60px 0; text-align: center; }
-.newsletter-form { display: flex; flex-direction: column; max-width: 400px; margin: 30px auto; gap: 10px; }
-.newsletter-form input { padding: 15px; border-radius: 4px; border: 1px solid #333; background: #111; color: white; }
-.btn-primary { background: var(--accent); color: white; border: none; padding: 15px; cursor: pointer; font-weight: 700; }
-.form-message { margin-top: 15px; font-weight: bold; }
-.error { color: var(--accent); }
-.success { color: #00ff00; }
 
-.footer-bottom { text-align: center; padding-bottom: 30px; color: #444; font-size: 0.8rem; }
+.newsletter-box {
+     padding: 60px 0;
+      text-align: center; 
+    }
+
+.newsletter-form { 
+    display: flex; 
+    flex-direction: column; 
+    max-width: 400px; 
+    margin: 30px auto; 
+    gap: 10px; 
+}
+
+.newsletter-form input { 
+    padding: 15px; 
+    border-radius: 4px; 
+    border: 1px solid #333; 
+    background: #111; 
+    color: white; 
+
+}
+.btn-primary { 
+    background: var(--accent); 
+    color: white; 
+    border: none; 
+    padding: 15px; 
+    cursor: pointer; 
+    font-weight: 700; 
+}
+.form-message { 
+    margin-top: 15px; 
+    font-weight: bold; 
+}
+
+.error { 
+    color: var(--accent); 
+}
+
+.success { 
+    color: #00ff00; 
+}
+
+.footer-bottom { 
+    text-align: center; 
+    padding-bottom: 30px; 
+    color: #444; 
+    font-size: 0.8rem; 
+}
 
 
 
-/* ... Prethodni stilovi ostaju isti, dodajemo/menjamo sledeće: ... */
 
-/* Hamburger Dugme (sakriveno na desktopu) */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -162,7 +318,7 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-black); colo
     border-radius: 2px;
 }
 
-/* Overlay */
+
 .overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -179,19 +335,21 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-black); colo
 }
 
 /* RESPONSIVE CSS */
-@media (max-width: 768px) {
-    .hamburger { display: flex; }
 
-    /* Hamburger Transformacija u X */
+@media (max-width: 768px) {
+   
+ .hamburger { display: flex; }
+
+   
     .hamburger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-    /* Off-canvas Meni */
+   
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%; /* Početna pozicija van ekrana */
+        right: -100%; 
         width: 300px;
         height: 100vh;
         background: #111;
@@ -202,7 +360,7 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-black); colo
     }
 
     .nav-menu.active {
-        right: 0; /* Ulazi u ekran */
+        right: 0;
     }
 
     .nav-links {
@@ -212,16 +370,13 @@ body { font-family: 'Inter', sans-serif; background-color: var(--bg-black); colo
     }
 
     .nav-links a {
-        font-size: 1.5rem; /* Veći font za lakši klik prstom */
+        font-size: 1.5rem;
     }
 
-    /* Hero h1 smanjenje na mobilnom */
+   
     .hero-content h1 { font-size: 3rem; }
 }
 
-/* ===============================
-   AUTOR PAGE STYLES
-   =============================== */
 
 .autor-grid {
     margin-top: 40px;
