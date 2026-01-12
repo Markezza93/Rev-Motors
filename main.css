@@ -222,7 +222,8 @@ body {
     background: #050505;
     padding: 40px 0; 
     overflow: hidden; 
-    border-y: 1px solid #222; 
+    border-top: 1px solid #222; 
+    border-bottom: 1px solid #222;
 }
 
 .carousel-track { 
